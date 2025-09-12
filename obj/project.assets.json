@@ -185,24 +185,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ivanm\\.nuget\\packages\\": {}
+    "C:\\Users\\Ombro\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CLINICA\\CLINICA2\\ClinicaApp.csproj",
+      "projectUniqueName": "D:\\Users\\Ombro\\Documents\\clinica\\Clinica-Medica\\ClinicaApp.csproj",
       "projectName": "ClinicaApp",
-      "projectPath": "C:\\CLINICA\\CLINICA2\\ClinicaApp.csproj",
-      "packagesPath": "C:\\Users\\ivanm\\.nuget\\packages\\",
-      "outputPath": "C:\\CLINICA\\CLINICA2\\obj\\",
+      "projectPath": "D:\\Users\\Ombro\\Documents\\clinica\\Clinica-Medica\\ClinicaApp.csproj",
+      "packagesPath": "C:\\Users\\Ombro\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\Ombro\\Documents\\clinica\\Clinica-Medica\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ivanm\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "D:\\Users\\Ombro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "D:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
       ],
       "originalTargetFrameworks": [
         "net9.0-windows"
       ],
       "sources": {
+        "D:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -251,7 +257,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "D:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

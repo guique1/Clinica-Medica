@@ -12,13 +12,11 @@ namespace ClinicaApp
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label labelCPF;
-        private System.Windows.Forms.TextBox textBoxCPF;
         private System.Windows.Forms.Label labelDataNasc;
         private System.Windows.Forms.DateTimePicker dateTimePickerDataNasc;
         private System.Windows.Forms.Label labelEndereco;
         private System.Windows.Forms.TextBox textBoxEndereco;
         private System.Windows.Forms.Label labelTelefone;
-        private System.Windows.Forms.TextBox textBoxTelefone;
         private System.Windows.Forms.Label labelHistorico;
         private System.Windows.Forms.TextBox textBoxHistorico;
         private System.Windows.Forms.Button buttonSalvar;
@@ -32,7 +30,6 @@ namespace ClinicaApp
         private System.Windows.Forms.Button buttonLimpar;
     private System.Windows.Forms.Button buttonExportar;
     private System.Windows.Forms.MenuStrip menuStrip1;
-    private System.Windows.Forms.ToolStripMenuItem menuClientes;
     private System.Windows.Forms.ToolStripMenuItem menuAgendamentos;
     private System.Windows.Forms.ToolStripMenuItem menuMedicamentos;
     private System.Windows.Forms.ToolStripMenuItem menuDoencas;
@@ -59,231 +56,311 @@ namespace ClinicaApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.labelNome = new System.Windows.Forms.Label();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
-            this.labelCPF = new System.Windows.Forms.Label();
-            this.textBoxCPF = new System.Windows.Forms.TextBox();
-            this.labelDataNasc = new System.Windows.Forms.Label();
-            this.dateTimePickerDataNasc = new System.Windows.Forms.DateTimePicker();
-            this.labelEndereco = new System.Windows.Forms.Label();
-            this.textBoxEndereco = new System.Windows.Forms.TextBox();
-            this.labelTelefone = new System.Windows.Forms.Label();
-            this.textBoxTelefone = new System.Windows.Forms.TextBox();
-            this.labelHistorico = new System.Windows.Forms.Label();
-            this.textBoxHistorico = new System.Windows.Forms.TextBox();
-            this.buttonSalvar = new System.Windows.Forms.Button();
-            this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
-            this.buttonConsultar = new System.Windows.Forms.Button();
-            this.buttonEditar = new System.Windows.Forms.Button();
-            this.buttonExcluir = new System.Windows.Forms.Button();
-            this.labelBuscar = new System.Windows.Forms.Label();
-            this.textBoxBuscar = new System.Windows.Forms.TextBox();
-            this.buttonBuscar = new System.Windows.Forms.Button();
-            this.buttonLimpar = new System.Windows.Forms.Button();
-            this.buttonExportar = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuAgendamentos = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuMedicamentos = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuDoencas = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuPrescricoes = new System.Windows.Forms.ToolStripMenuItem();
-
+            labelNome = new Label();
+            textBoxNome = new TextBox();
+            labelCPF = new Label();
+            labelDataNasc = new Label();
+            dateTimePickerDataNasc = new DateTimePicker();
+            labelEndereco = new Label();
+            textBoxEndereco = new TextBox();
+            labelTelefone = new Label();
+            labelHistorico = new Label();
+            textBoxHistorico = new TextBox();
+            buttonSalvar = new Button();
+            dataGridViewClientes = new DataGridView();
+            buttonConsultar = new Button();
+            buttonEditar = new Button();
+            buttonExcluir = new Button();
+            labelBuscar = new Label();
+            textBoxBuscar = new TextBox();
+            buttonBuscar = new Button();
+            buttonLimpar = new Button();
+            buttonExportar = new Button();
+            menuStrip1 = new MenuStrip();
+            menuAgendamentos = new ToolStripMenuItem();
+            menuMedicamentos = new ToolStripMenuItem();
+            menuDoencas = new ToolStripMenuItem();
+            menuPrescricoes = new ToolStripMenuItem();
+            menuClientes = new Label();
+            textBoxCPF = new MaskedTextBox();
+            textBoxTelefone = new MaskedTextBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).BeginInit();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
+            // 
             // labelNome
-            this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(20, 20);
-            this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(43, 15);
-            this.labelNome.Text = "Nome";
+            // 
+            labelNome.AutoSize = true;
+            labelNome.Location = new Point(36, 50);
+            labelNome.Name = "labelNome";
+            labelNome.Size = new Size(40, 15);
+            labelNome.TabIndex = 0;
+            labelNome.Text = "Nome";
+            // 
             // textBoxNome
-            this.textBoxNome.Location = new System.Drawing.Point(120, 17);
-            this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(200, 23);
+            // 
+            textBoxNome.Location = new Point(120, 47);
+            textBoxNome.Name = "textBoxNome";
+            textBoxNome.Size = new Size(200, 23);
+            textBoxNome.TabIndex = 1;
+            // 
             // labelCPF
-            this.labelCPF.AutoSize = true;
-            this.labelCPF.Location = new System.Drawing.Point(20, 60);
-            this.labelCPF.Name = "labelCPF";
-            this.labelCPF.Size = new System.Drawing.Size(28, 15);
-            this.labelCPF.Text = "CPF";
-            // textBoxCPF
-            this.textBoxCPF.Location = new System.Drawing.Point(120, 57);
-            this.textBoxCPF.Name = "textBoxCPF";
-            this.textBoxCPF.Size = new System.Drawing.Size(200, 23);
+            // 
+            labelCPF.AutoSize = true;
+            labelCPF.Location = new Point(36, 77);
+            labelCPF.Name = "labelCPF";
+            labelCPF.Size = new Size(28, 15);
+            labelCPF.TabIndex = 2;
+            labelCPF.Text = "CPF";
+            // 
             // labelDataNasc
-            this.labelDataNasc.AutoSize = true;
-            this.labelDataNasc.Location = new System.Drawing.Point(20, 100);
-            this.labelDataNasc.Name = "labelDataNasc";
-            this.labelDataNasc.Size = new System.Drawing.Size(99, 15);
-            this.labelDataNasc.Text = "Data Nascimento";
+            // 
+            labelDataNasc.AutoSize = true;
+            labelDataNasc.Location = new Point(12, 108);
+            labelDataNasc.Name = "labelDataNasc";
+            labelDataNasc.Size = new Size(98, 15);
+            labelDataNasc.TabIndex = 4;
+            labelDataNasc.Text = "Data Nascimento";
+            // 
             // dateTimePickerDataNasc
-            this.dateTimePickerDataNasc.Location = new System.Drawing.Point(120, 97);
-            this.dateTimePickerDataNasc.Name = "dateTimePickerDataNasc";
-            this.dateTimePickerDataNasc.Size = new System.Drawing.Size(200, 23);
+            // 
+            dateTimePickerDataNasc.Location = new Point(120, 108);
+            dateTimePickerDataNasc.Name = "dateTimePickerDataNasc";
+            dateTimePickerDataNasc.Size = new Size(200, 23);
+            dateTimePickerDataNasc.TabIndex = 5;
+            // 
             // labelEndereco
-            this.labelEndereco.AutoSize = true;
-            this.labelEndereco.Location = new System.Drawing.Point(20, 140);
-            this.labelEndereco.Name = "labelEndereco";
-            this.labelEndereco.Size = new System.Drawing.Size(56, 15);
-            this.labelEndereco.Text = "Endereço";
+            // 
+            labelEndereco.AutoSize = true;
+            labelEndereco.Location = new Point(24, 140);
+            labelEndereco.Name = "labelEndereco";
+            labelEndereco.Size = new Size(56, 15);
+            labelEndereco.TabIndex = 6;
+            labelEndereco.Text = "Endereço";
+            // 
             // textBoxEndereco
-            this.textBoxEndereco.Location = new System.Drawing.Point(120, 137);
-            this.textBoxEndereco.Name = "textBoxEndereco";
-            this.textBoxEndereco.Size = new System.Drawing.Size(200, 23);
+            // 
+            textBoxEndereco.Location = new Point(120, 137);
+            textBoxEndereco.Name = "textBoxEndereco";
+            textBoxEndereco.Size = new Size(200, 23);
+            textBoxEndereco.TabIndex = 7;
+            // 
             // labelTelefone
-            this.labelTelefone.AutoSize = true;
-            this.labelTelefone.Location = new System.Drawing.Point(20, 180);
-            this.labelTelefone.Name = "labelTelefone";
-            this.labelTelefone.Size = new System.Drawing.Size(51, 15);
-            this.labelTelefone.Text = "Telefone";
-            // textBoxTelefone
-            this.textBoxTelefone.Location = new System.Drawing.Point(120, 177);
-            this.textBoxTelefone.Name = "textBoxTelefone";
-            this.textBoxTelefone.Size = new System.Drawing.Size(200, 23);
+            // 
+            labelTelefone.AutoSize = true;
+            labelTelefone.Location = new Point(24, 180);
+            labelTelefone.Name = "labelTelefone";
+            labelTelefone.Size = new Size(52, 15);
+            labelTelefone.TabIndex = 8;
+            labelTelefone.Text = "Telefone";
+            // 
             // labelHistorico
-            this.labelHistorico.AutoSize = true;
-            this.labelHistorico.Location = new System.Drawing.Point(20, 220);
-            this.labelHistorico.Name = "labelHistorico";
-            this.labelHistorico.Size = new System.Drawing.Size(92, 15);
-            this.labelHistorico.Text = "Histórico Médico";
+            // 
+            labelHistorico.AutoSize = true;
+            labelHistorico.Location = new Point(16, 220);
+            labelHistorico.Name = "labelHistorico";
+            labelHistorico.Size = new Size(98, 15);
+            labelHistorico.TabIndex = 10;
+            labelHistorico.Text = "Histórico Médico";
+            // 
             // textBoxHistorico
-            this.textBoxHistorico.Location = new System.Drawing.Point(120, 217);
-            this.textBoxHistorico.Name = "textBoxHistorico";
-            this.textBoxHistorico.Size = new System.Drawing.Size(200, 60);
-            this.textBoxHistorico.Multiline = true;
+            // 
+            textBoxHistorico.Location = new Point(120, 217);
+            textBoxHistorico.Multiline = true;
+            textBoxHistorico.Name = "textBoxHistorico";
+            textBoxHistorico.Size = new Size(200, 60);
+            textBoxHistorico.TabIndex = 11;
+            // 
             // buttonSalvar
-            this.buttonSalvar.Location = new System.Drawing.Point(120, 290);
-            this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(100, 30);
-            this.buttonSalvar.Text = "Salvar";
-            this.buttonSalvar.UseVisualStyleBackColor = true;
-            // buttonLimpar
-            this.buttonLimpar.Location = new System.Drawing.Point(230, 290);
-            this.buttonLimpar.Name = "buttonLimpar";
-            this.buttonLimpar.Size = new System.Drawing.Size(90, 30);
-            this.buttonLimpar.Text = "Limpar";
-            this.buttonLimpar.UseVisualStyleBackColor = true;
+            // 
+            buttonSalvar.Location = new Point(120, 290);
+            buttonSalvar.Name = "buttonSalvar";
+            buttonSalvar.Size = new Size(100, 30);
+            buttonSalvar.TabIndex = 12;
+            buttonSalvar.Text = "Salvar";
+            buttonSalvar.UseVisualStyleBackColor = true;
+            // 
             // dataGridViewClientes
-            this.dataGridViewClientes.Location = new System.Drawing.Point(350, 17);
-            this.dataGridViewClientes.Name = "dataGridViewClientes";
-            this.dataGridViewClientes.Size = new System.Drawing.Size(600, 250);
-            this.dataGridViewClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewClientes.ReadOnly = true;
-            this.dataGridViewClientes.MultiSelect = false;
+            // 
+            dataGridViewClientes.Location = new Point(350, 17);
+            dataGridViewClientes.MultiSelect = false;
+            dataGridViewClientes.Name = "dataGridViewClientes";
+            dataGridViewClientes.ReadOnly = true;
+            dataGridViewClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewClientes.Size = new Size(600, 250);
+            dataGridViewClientes.TabIndex = 14;
+            // 
             // buttonConsultar
-            this.buttonConsultar.Location = new System.Drawing.Point(350, 280);
-            this.buttonConsultar.Name = "buttonConsultar";
-            this.buttonConsultar.Size = new System.Drawing.Size(100, 30);
-            this.buttonConsultar.Text = "Consultar";
-            this.buttonConsultar.UseVisualStyleBackColor = true;
+            // 
+            buttonConsultar.Location = new Point(350, 280);
+            buttonConsultar.Name = "buttonConsultar";
+            buttonConsultar.Size = new Size(100, 30);
+            buttonConsultar.TabIndex = 15;
+            buttonConsultar.Text = "Consultar";
+            buttonConsultar.UseVisualStyleBackColor = true;
+            // 
             // buttonEditar
-            this.buttonEditar.Location = new System.Drawing.Point(460, 280);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(100, 30);
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.UseVisualStyleBackColor = true;
+            // 
+            buttonEditar.Location = new Point(460, 280);
+            buttonEditar.Name = "buttonEditar";
+            buttonEditar.Size = new Size(100, 30);
+            buttonEditar.TabIndex = 16;
+            buttonEditar.Text = "Editar";
+            buttonEditar.UseVisualStyleBackColor = true;
+            // 
             // buttonExcluir
-            this.buttonExcluir.Location = new System.Drawing.Point(570, 280);
-            this.buttonExcluir.Name = "buttonExcluir";
-            this.buttonExcluir.Size = new System.Drawing.Size(100, 30);
-            this.buttonExcluir.Text = "Excluir";
-            this.buttonExcluir.UseVisualStyleBackColor = true;
-            // buttonExportar
-            this.buttonExportar.Location = new System.Drawing.Point(680, 280);
-            this.buttonExportar.Name = "buttonExportar";
-            this.buttonExportar.Size = new System.Drawing.Size(120, 30);
-            this.buttonExportar.Text = "Exportar CSV";
-            this.buttonExportar.UseVisualStyleBackColor = true;
-            // menuStrip1
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-                this.menuClientes,
-                this.menuAgendamentos,
-                this.menuMedicamentos,
-                this.menuDoencas,
-                this.menuPrescricoes});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(980, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-
-
-            // menuClientes
-            this.menuClientes.Name = "menuClientes";
-            this.menuClientes.Size = new System.Drawing.Size(64, 20);
-            this.menuClientes.Text = "Clientes";
-
-            // menuAgendamentos
-            this.menuAgendamentos.Name = "menuAgendamentos";
-            this.menuAgendamentos.Size = new System.Drawing.Size(99, 20);
-            this.menuAgendamentos.Text = "Agendamentos";
-
-            // menuMedicamentos
-            this.menuMedicamentos.Name = "menuMedicamentos";
-            this.menuMedicamentos.Size = new System.Drawing.Size(99, 20);
-            this.menuMedicamentos.Text = "Medicamentos";
-
-            // menuDoencas
-            this.menuDoencas = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuDoencas.Name = "menuDoencas";
-            this.menuDoencas.Size = new System.Drawing.Size(70, 20);
-            this.menuDoencas.Text = "Doenças";
-
-            // menuPrescricoes
-            this.menuPrescricoes = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuPrescricoes.Name = "menuPrescricoes";
-            this.menuPrescricoes.Size = new System.Drawing.Size(85, 20);
-            this.menuPrescricoes.Text = "Prescrições";
-
+            // 
+            buttonExcluir.Location = new Point(570, 280);
+            buttonExcluir.Name = "buttonExcluir";
+            buttonExcluir.Size = new Size(100, 30);
+            buttonExcluir.TabIndex = 17;
+            buttonExcluir.Text = "Excluir";
+            buttonExcluir.UseVisualStyleBackColor = true;
+            // 
             // labelBuscar
-            this.labelBuscar.AutoSize = true;
-            this.labelBuscar.Location = new System.Drawing.Point(350, 320);
-            this.labelBuscar.Name = "labelBuscar";
-            this.labelBuscar.Size = new System.Drawing.Size(42, 15);
-            this.labelBuscar.Text = "Buscar";
+            // 
+            labelBuscar.AutoSize = true;
+            labelBuscar.Location = new Point(350, 320);
+            labelBuscar.Name = "labelBuscar";
+            labelBuscar.Size = new Size(42, 15);
+            labelBuscar.TabIndex = 19;
+            labelBuscar.Text = "Buscar";
+            // 
             // textBoxBuscar
-            this.textBoxBuscar.Location = new System.Drawing.Point(400, 317);
-            this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(200, 23);
+            // 
+            textBoxBuscar.Location = new Point(400, 317);
+            textBoxBuscar.Name = "textBoxBuscar";
+            textBoxBuscar.Size = new Size(200, 23);
+            textBoxBuscar.TabIndex = 20;
+            // 
             // buttonBuscar
-            this.buttonBuscar.Location = new System.Drawing.Point(610, 315);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(80, 27);
-            this.buttonBuscar.Text = "Buscar";
-            this.buttonBuscar.UseVisualStyleBackColor = true;
-
+            // 
+            buttonBuscar.Location = new Point(610, 315);
+            buttonBuscar.Name = "buttonBuscar";
+            buttonBuscar.Size = new Size(80, 27);
+            buttonBuscar.TabIndex = 21;
+            buttonBuscar.Text = "Buscar";
+            buttonBuscar.UseVisualStyleBackColor = true;
+            // 
+            // buttonLimpar
+            // 
+            buttonLimpar.Location = new Point(230, 290);
+            buttonLimpar.Name = "buttonLimpar";
+            buttonLimpar.Size = new Size(90, 30);
+            buttonLimpar.TabIndex = 13;
+            buttonLimpar.Text = "Limpar";
+            buttonLimpar.UseVisualStyleBackColor = true;
+            // 
+            // buttonExportar
+            // 
+            buttonExportar.Location = new Point(680, 280);
+            buttonExportar.Name = "buttonExportar";
+            buttonExportar.Size = new Size(120, 30);
+            buttonExportar.TabIndex = 18;
+            buttonExportar.Text = "Exportar CSV";
+            buttonExportar.UseVisualStyleBackColor = true;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuAgendamentos, menuMedicamentos, menuDoencas, menuPrescricoes });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(980, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // menuAgendamentos
+            // 
+            menuAgendamentos.Name = "menuAgendamentos";
+            menuAgendamentos.Size = new Size(100, 20);
+            menuAgendamentos.Text = "Agendamentos";
+            // 
+            // menuMedicamentos
+            // 
+            menuMedicamentos.Name = "menuMedicamentos";
+            menuMedicamentos.Size = new Size(98, 20);
+            menuMedicamentos.Text = "Medicamentos";
+            // 
+            // menuDoencas
+            // 
+            menuDoencas.Name = "menuDoencas";
+            menuDoencas.Size = new Size(64, 20);
+            menuDoencas.Text = "Doenças";
+            // 
+            // menuPrescricoes
+            // 
+            menuPrescricoes.Name = "menuPrescricoes";
+            menuPrescricoes.Size = new Size(78, 20);
+            menuPrescricoes.Text = "Prescrições";
+            // 
+            // menuClientes
+            // 
+            menuClientes.AutoSize = true;
+            menuClientes.Location = new Point(24, 24);
+            menuClientes.Name = "menuClientes";
+            menuClientes.Size = new Size(75, 15);
+            menuClientes.TabIndex = 22;
+            menuClientes.Text = "Criar Cliente:";
+            // 
+            // textBoxCPF
+            // 
+            textBoxCPF.Location = new Point(120, 74);
+            textBoxCPF.Mask = "000,000,000-00";
+            textBoxCPF.Name = "textBoxCPF";
+            textBoxCPF.Size = new Size(200, 23);
+            textBoxCPF.TabIndex = 23;
+            // 
+            // textBoxTelefone
+            // 
+            textBoxTelefone.Location = new Point(120, 180);
+            textBoxTelefone.Mask = "(00) 00000-0000";
+            textBoxTelefone.Name = "textBoxTelefone";
+            textBoxTelefone.Size = new Size(200, 23);
+            textBoxTelefone.TabIndex = 24;
+            // 
             // Form1
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 350);
-            this.Controls.Add(this.labelNome);
-            this.Controls.Add(this.textBoxNome);
-            this.Controls.Add(this.labelCPF);
-            this.Controls.Add(this.textBoxCPF);
-            this.Controls.Add(this.labelDataNasc);
-            this.Controls.Add(this.dateTimePickerDataNasc);
-            this.Controls.Add(this.labelEndereco);
-            this.Controls.Add(this.textBoxEndereco);
-            this.Controls.Add(this.labelTelefone);
-            this.Controls.Add(this.textBoxTelefone);
-            this.Controls.Add(this.labelHistorico);
-            this.Controls.Add(this.textBoxHistorico);
-            this.Controls.Add(this.buttonSalvar);
-            this.Controls.Add(this.buttonLimpar);
-            this.Controls.Add(this.dataGridViewClientes);
-            this.Controls.Add(this.buttonConsultar);
-            this.Controls.Add(this.buttonEditar);
-            this.Controls.Add(this.buttonExcluir);
-            this.Controls.Add(this.buttonExportar);
-            this.Controls.Add(this.labelBuscar);
-            this.Controls.Add(this.textBoxBuscar);
-            this.Controls.Add(this.buttonBuscar);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Text = "Clínica - Menu Principal";
-            this.Name = "Form1";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(980, 350);
+            Controls.Add(textBoxTelefone);
+            Controls.Add(textBoxCPF);
+            Controls.Add(menuClientes);
+            Controls.Add(labelNome);
+            Controls.Add(textBoxNome);
+            Controls.Add(labelCPF);
+            Controls.Add(labelDataNasc);
+            Controls.Add(dateTimePickerDataNasc);
+            Controls.Add(labelEndereco);
+            Controls.Add(textBoxEndereco);
+            Controls.Add(labelTelefone);
+            Controls.Add(labelHistorico);
+            Controls.Add(textBoxHistorico);
+            Controls.Add(buttonSalvar);
+            Controls.Add(buttonLimpar);
+            Controls.Add(dataGridViewClientes);
+            Controls.Add(buttonConsultar);
+            Controls.Add(buttonEditar);
+            Controls.Add(buttonExcluir);
+            Controls.Add(buttonExportar);
+            Controls.Add(labelBuscar);
+            Controls.Add(textBoxBuscar);
+            Controls.Add(buttonBuscar);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Name = "Form1";
+            Text = "Clínica - Menu Principal";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label menuClientes;
+        private MaskedTextBox textBoxCPF;
+        private MaskedTextBox textBoxTelefone;
     }
 }
